@@ -17,6 +17,7 @@ import { DaoContainer } from "./components/DaoContainer";
 import { Yeet } from "./pages/Yeet";
 import About from "./pages/About";
 import Temp from "./pages/temp";
+import Swap from "./pages/Swap";
 
 export const Routes = ({
   setDaoChainId,
@@ -46,6 +47,7 @@ export const Routes = ({
         <Route path={`success/:daoId`} element={<Success />} />
         <Route path={`about`} element={<About />} />
         <Route path={`temp`} element={<Temp />} />
+        <Route path={`swap`} element={<Swap />} />
       </Route>
       <Route path={MULTI_DAO_ROUTER} element={<DaoContainer />}>
         <Route path={`:yeeterId`} element={<Yeet />} />

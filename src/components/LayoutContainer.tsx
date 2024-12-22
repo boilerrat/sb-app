@@ -1,11 +1,11 @@
 import { Outlet } from "react-router-dom";
 import { styled } from "styled-components";
-
-import { DaoHausNav, useDHConnect } from "@daohaus/connect";
+import { useDHConnect } from "@daohaus/connect";
 import { TXBuilder } from "@daohaus/tx-builder";
 import { MainLayout, OuterLayout, widthQuery } from "@daohaus/ui";
 import { Brand } from "./Brand";
 import { assembleMemeSummonerArgs } from "../utils/summonTx";
+import { CustomNav } from "./CustomNav";
 
 const Header = styled.div`
   display: flex;
@@ -38,12 +38,11 @@ export const LayoutContainer = () => {
       <OuterLayout>
         <Header>
           <div className="left-nav">{<Brand />}</div>
-          <DaoHausNav />
+          <CustomNav />
         </Header>
         <MainLayout>
           <Outlet />
         </MainLayout>
-        {/* <Footer /> */}
       </OuterLayout>
     </TXBuilder>
   );
